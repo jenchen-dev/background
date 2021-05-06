@@ -30,10 +30,8 @@ function getRandomColor() {
 }
 
 function setRandomColor() {
-    var random1 = getRandomColor()
-    var random2 = getRandomColor()
-    color1.value = random1
-    color2.value = random2
+    color1.value = getRandomColor()
+    color2.value = getRandomColor()
     backgroundStyle(color1.value, color2.value);
 }
 
