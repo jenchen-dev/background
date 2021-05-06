@@ -5,21 +5,19 @@ var body = document.getElementById("gradient");
 var random = document.querySelector(".random");
 var reset = document.querySelector(".reset");
 
-function colorText() {
+function backgroundStyle(firstcolor, secondcolor) {
+    body.style.background = "linear-gradient(to right, " + firstcolor + ", " + secondcolor + ")";
     css.textContent = body.style.background;
 }
 
 function defaultGradient() {
-    body.style.background = "linear-gradient(to right, #FFCFAA, #D1686D)";
-    color1.value = "#FFCFAA";
-    color2.value = "#D1686D";
-    colorText();
+    color1.value = "#FAF86C";
+    color2.value = "#7BCDFC";
+    backgroundStyle(color1.value, color2.value);
 }
 
 function setGradient() {
-    body.style.background = "linear-gradient(to right, " + 
-    color1.value + ", " + color2.value + ")";
-    colorText();
+    backgroundStyle(color1.value, color2.value);
 }
 
 function getRandomColor() {
@@ -34,11 +32,9 @@ function getRandomColor() {
 function setRandomColor() {
     var random1 = getRandomColor()
     var random2 = getRandomColor()
-    body.style.background = "linear-gradient(to right, " + 
-    random1 + ", " + random2 + ")";
     color1.value = random1
     color2.value = random2
-    colorText();
+    backgroundStyle(color1.value, color2.value);
 }
 
 defaultGradient()
