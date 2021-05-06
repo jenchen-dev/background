@@ -45,5 +45,6 @@ defaultGradient()
 
 color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
+
 random.addEventListener("click", setRandomColor);
 reset.addEventListener("click", defaultGradient);
