@@ -21,21 +21,21 @@ function setGradient() {
 }
 
 function getRandomColor() {
-    var letters = '0123456789ABCDEF';
-    var color = '#';
-    for (var i = 0; i < 6; i++) {
+    let letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
 }
 
 function setRandomColor() {
-    color1.value = getRandomColor()
-    color2.value = getRandomColor()
+    color1.value = getRandomColor();
+    color2.value = getRandomColor();
     backgroundStyle(color1.value, color2.value);
 }
 
-defaultGradient()
+defaultGradient();
 
 color1.addEventListener("input", setGradient);
 color2.addEventListener("input", setGradient);
